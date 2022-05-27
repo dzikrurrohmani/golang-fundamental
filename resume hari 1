@@ -1,0 +1,98 @@
+
+- tipe variabel (GO FUNDAMENTAL.pdf halaman 5) dan operator (GO FUNDAMENTAL.pdf halaman 9)
+- variabel: cara penulisan: 1. var (nama variabel) tipe-variabel 2. var (variabel 1, variabel 2 tipe variabel
+variabel 3, variabel 4 tipe variabel)
+2. inteference variabel (tidak perlu mendefinisikan tipe variabel. gunakan :=)
+
+
+- go menganut staticacly type, karenanya bagi variabel yg tidak digunakan harus dihapus atau program tidak akan bisa dibaca compiler
+
+- golang merupakan google language, itu dibuat oleh 3 orang dari google yaitu robert griesemer, rob pike, dan ken thompson.
+dimulai projectnya tahun 2007, dan dipublikasikan pada tahun 2009.
+salah satu kelebihan utama dari go language ini adalah mendukung sistem konkurensi. 
+
+- pengubahan tipe variabel 1 ke yg lain
+	- fmt.Sprint ==> untuk mengkonversi angka ke string
+	- strconv.Itoa ==> mengkonversi integer ke string
+	- strconv.Atoi ==> mengkonversi string ke integer
+	- strconv.ParseFloat ==> mengkonversi string ke float
+	- strconv.ParseBool ==>mengkonversi string ke bool
+
+
+- input nilai:
+	%s ==> string
+	%d ==> bilangan bulat
+	%f ==> bilangan desimal
+	%v ==> semua
+
+- input: scanln dan bufio
+- \n abcdgef akan berhenti di b
+- string to integer: jika stringnya 20a, ketika diubah ke int 20 a akan bernilai 0. program tidak akan galat
+
+- string replace, menggantikan new line
+- string Replace, spasi diganti "-"
+
+- penggunaan operator:1. deklarasi variabel, 2. penerapan operator, 3. perhitungan oleh compiler
+
+- prosedur running (OS Linux): 1. inisial go.mod (go mod init namafile) 2. buat file .go 3. coding 4. running via go run .
+
+- menerima input: scanln (hanya bisa mengetikan satu kata), bufionew reader (bisa menginputkan lebih dari satu kata)
+
+- global dan local variabel, perbedaannya
+
+- augmented assignment: meringkas argumen operasi seperti di bahasa pemrograman JAVA
+
+- strconv.Atoi bisa pakai strconv.ParseInteger untuk mengubah string ke int
+
+- penamaan variabel: camelCase, pascalCase. tidak boleh pakai kata kunci
+- tujuan komentar: memudahkan code mudah dipahami developer lain
+
+- operator-operator pada GO
+- perbandingan pada implementasi if-else
+
+- penulisan angka dibelakang koma: %(angka yg diinginkan di belakang koma)f
+
+- int: int bisa pakai minus. uint: hanya untuk bilangan positif
+- float: float32, float 64
+
+- go cammand dan fungsinya: go build, go fmt, go install, go get, dll (halaman 4 GO FUNDAMENTAL.pdf)
+
+- go run playground, bisa untuk running
+- sprintf dan strconv.atoi: konversi variabel
+
+- newscanner pada bufio untuk bisa langsung konversi antar variabel
+
+- underscore (_) adalah perintah untuk mengabaikan variabel yg ditulis
+Unused variables are those variables that are defined by the user throughout the program but he/she never makes use of these variables. These variables make the program almost unreadable. As you know, Golang is a more concise and readable programming language so it doesn’t allow the programmer to define an unused variable if you do such, then the compiler will throw an error.
+
+- manipulasi string
+fmt.Println(strings.ToUpper(lastName))= ke kapital
+fmt.Println(strings.ToLower(lastName))= ke non kapital
+fmt.Println(strings.Contains(firstName, "S"))= apakah ada 's' di string
+fmt.Println(strings.Count(lastName, "A"))= ada berapa 'a' di string
+fmt.Println(len(lastName))= jumlah string (hurufnya)
+
+- tipe data: int8, int16, int32. penggunaan jenis int memanfaatkan memori. gunakan sesuai leperluan
+
+- println= menambahkan baris baru setelah output
+- print= hanya mengoutputkan, tidak menambah baris
+- printf= jika hendak mengoutputkan beberapa variabel berbeda, serta apabila melibatkan %d, %s, dll
+
+- golang merupakan desain code yg dpt dijalankan secara paralel. dapat menjalankan beberapa program secara bersamaan
+- go lang dapat memanfaatkan multiprosesor komputer
+
+- operator logika untuk mencari kebenaran: & (dan), ||(atau), !(negasi)
+
+- konversi tipe data dengan alokasi memori yg berbeda, harus diperhatikan
+- jika alokasi tipe data salah, running tidak akan galat namun menampilkan hasil negatif dari rentang paling atsnya
+
+- output string bisa result a + b kemudian print result
+
+- operasi pangkat net(a,b). a= basis, b= pangkat
+- operasi harus tipe data yg sama
+
+- func main() menyatakan program utama, hanya ada boleh 1 program utama
+
+- jangan sembarangan memilih tipe data: sprt int8, int16, float 16, dll. berakibat pd alokasi memori
+
+- result := a + b mengubah ke a - b result tidak perlu gunakan := kembali
