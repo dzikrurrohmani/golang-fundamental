@@ -21,8 +21,8 @@ func main() {
 	fmt.Println(location("Sragen"))
 }
 
-func location(city string) (string, string) {
-	var province, region string
+func location(city string) (province, region string) { // Naming return
+	// var province, region string
 
 	switch city {
 	case "Jakarta Selatan", "Jakarta Barat", "Jakarta Timur":
@@ -34,5 +34,6 @@ func location(city string) (string, string) {
 	default:
 		province, region = "tidak ada", "tidak ada"
 	}
-	return province, region
+	return
+	// return province, region
 }
