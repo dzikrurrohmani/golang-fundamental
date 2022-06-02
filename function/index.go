@@ -110,9 +110,7 @@ package main
 import "fmt"
 
 func main() {
-	var number int
-
-	number = 10
+	var number int = 10
 
 	req(number)
 }
