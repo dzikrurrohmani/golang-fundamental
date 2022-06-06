@@ -4,8 +4,8 @@ type Rectangle struct {
 	Length, Width float32
 }
 
-func(r *Rectangle) Area() float32 {
-	return r.Length*r.Width
+func(r *Rectangle) Area() float64 {
+	return float64(r.Length)*float64(r.Width)
 }
 
 
