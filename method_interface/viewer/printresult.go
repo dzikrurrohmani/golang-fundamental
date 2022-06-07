@@ -2,7 +2,7 @@ package viewer
 
 import (
 	"fmt"
-	"golang-fundamental/methodInterfacelatihan/procedure"
+	"golang-fundamental/method_nterfacc/procedure"
 )
 
 func PrintResult() {
