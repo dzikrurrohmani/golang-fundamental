@@ -1,98 +1,34 @@
-
-- tipe variabel (GO FUNDAMENTAL.pdf halaman 5) dan operator (GO FUNDAMENTAL.pdf halaman 9)
-- variabel: cara penulisan: 1. var (nama variabel) tipe-variabel 2. var (variabel 1, variabel 2 tipe variabel
-variabel 3, variabel 4 tipe variabel)
-2. inteference variabel (tidak perlu mendefinisikan tipe variabel. gunakan :=)
-
-
-- go menganut staticacly type, karenanya bagi variabel yg tidak digunakan harus dihapus atau program tidak akan bisa dibaca compiler
-
-- golang merupakan google language, itu dibuat oleh 3 orang dari google yaitu robert griesemer, rob pike, dan ken thompson.
-dimulai projectnya tahun 2007, dan dipublikasikan pada tahun 2009.
-salah satu kelebihan utama dari go language ini adalah mendukung sistem konkurensi. 
-
-- pengubahan tipe variabel 1 ke yg lain
-	- fmt.Sprint ==> untuk mengkonversi angka ke string
-	- strconv.Itoa ==> mengkonversi integer ke string
-	- strconv.Atoi ==> mengkonversi string ke integer
-	- strconv.ParseFloat ==> mengkonversi string ke float
-	- strconv.ParseBool ==>mengkonversi string ke bool
-
-
-- input nilai:
-	%s ==> string
-	%d ==> bilangan bulat
-	%f ==> bilangan desimal
-	%v ==> semua
-
-- input: scanln dan bufio
-- \n abcdgef akan berhenti di b
-- string to integer: jika stringnya 20a, ketika diubah ke int 20 a akan bernilai 0. program tidak akan galat
-
-- string replace, menggantikan new line
-- string Replace, spasi diganti "-"
-
-- penggunaan operator:1. deklarasi variabel, 2. penerapan operator, 3. perhitungan oleh compiler
-
-- prosedur running (OS Linux): 1. inisial go.mod (go mod init namafile) 2. buat file .go 3. coding 4. running via go run .
-
-- menerima input: scanln (hanya bisa mengetikan satu kata), bufionew reader (bisa menginputkan lebih dari satu kata)
-
-- global dan local variabel, perbedaannya
-
-- augmented assignment: meringkas argumen operasi seperti di bahasa pemrograman JAVA
-
-- strconv.Atoi bisa pakai strconv.ParseInteger untuk mengubah string ke int
-
-- penamaan variabel: camelCase, pascalCase. tidak boleh pakai kata kunci
-- tujuan komentar: memudahkan code mudah dipahami developer lain
-
-- operator-operator pada GO
-- perbandingan pada implementasi if-else
-
-- penulisan angka dibelakang koma: %(angka yg diinginkan di belakang koma)f
-
-- int: int bisa pakai minus. uint: hanya untuk bilangan positif
-- float: float32, float 64
-
-- go cammand dan fungsinya: go build, go fmt, go install, go get, dll (halaman 4 GO FUNDAMENTAL.pdf)
-
-- go run playground, bisa untuk running
-- sprintf dan strconv.atoi: konversi variabel
-
-- newscanner pada bufio untuk bisa langsung konversi antar variabel
-
-- underscore (_) adalah perintah untuk mengabaikan variabel yg ditulis
-Unused variables are those variables that are defined by the user throughout the program but he/she never makes use of these variables. These variables make the program almost unreadable. As you know, Golang is a more concise and readable programming language so it doesn’t allow the programmer to define an unused variable if you do such, then the compiler will throw an error.
-
-- manipulasi string
-fmt.Println(strings.ToUpper(lastName))= ke kapital
-fmt.Println(strings.ToLower(lastName))= ke non kapital
-fmt.Println(strings.Contains(firstName, "S"))= apakah ada 's' di string
-fmt.Println(strings.Count(lastName, "A"))= ada berapa 'a' di string
-fmt.Println(len(lastName))= jumlah string (hurufnya)
-
-- tipe data: int8, int16, int32. penggunaan jenis int memanfaatkan memori. gunakan sesuai leperluan
-
-- println= menambahkan baris baru setelah output
-- print= hanya mengoutputkan, tidak menambah baris
-- printf= jika hendak mengoutputkan beberapa variabel berbeda, serta apabila melibatkan %d, %s, dll
-
-- golang merupakan desain code yg dpt dijalankan secara paralel. dapat menjalankan beberapa program secara bersamaan
-- go lang dapat memanfaatkan multiprosesor komputer
-
-- operator logika untuk mencari kebenaran: & (dan), ||(atau), !(negasi)
-
-- konversi tipe data dengan alokasi memori yg berbeda, harus diperhatikan
-- jika alokasi tipe data salah, running tidak akan galat namun menampilkan hasil negatif dari rentang paling atsnya
-
-- output string bisa result a + b kemudian print result
-
-- operasi pangkat net(a,b). a= basis, b= pangkat
-- operasi harus tipe data yg sama
-
-- func main() menyatakan program utama, hanya ada boleh 1 program utama
-
-- jangan sembarangan memilih tipe data: sprt int8, int16, float 16, dll. berakibat pd alokasi memori
-
-- result := a + b mengubah ke a - b result tidak perlu gunakan := kembali
+1. elia : kita bisa membuat alias atau singkatan ketika import misal data -> d, interface mirip polymorphism pada OOP, dengan nama method sama dengan spesifikasi berbeda.
+2. fajar : interface adalah kumpulan dari method daripada dipanggil masing masing bisa dijadikan satu, pak edo: tidak memiliki implementation( method/ abstract function, tujuannya membuat kontrak, disepakati oleh struct atau custom type but majority struct yang mengimplementasikannya) 
+3. fira : penerapan pointer pada method, agar bisa pass by reference, maksudnya bisa mengubah.
+ian : belajar tentang embedded interface, maksudnya gabungan dari dua interface atau lebih yang akan menampung method.
+naja : interface kalau di OOP seperti polymorphism.
+irsa : interface termasuk tipe data, objek yang tipe data interface zero value nya nil 
+joshua : halo smack down, kita dituntun menjadi pribadi teliti, misal untuk import function dari beda package, seperti teliti nama method, interface juga harus teliti mendaftarkan semua methodnya. kak jut: agar ketika interface dipanggil tidak error
+kelvin : advice pak edo: interface tidak boleh tidak terlalu gendut, bisa di split, sudah baca maks 5-6 method di interface. source: https://itnext.io/interfaces-in-go-5c6e38b81b41
+kemal : dimana struct gabisa diexport karena private, struct bisa jadi receiver di method, dibuat public (kapitalisasi huruf awal) dulu agar bisa diexport
+kholis : casting untuk mendapatkan field yang diimplement di interface, lebih baik getter method, kalau banyak juga dibuat interface tersendiri.
+mahatma : mencoba struct bisa memanggil interface.
+maulana : import package bisa dibuat alias untuk memudahkan dan mempersingkat. ex : fmt -> f, kak jut: package juga bisa diignore cukup gunakan _, juga berlaku di package, implementasi waktu masuk ke db. wajib diimport tapi tidak digunakan
+monita : komponen di pakcage lain yang diimport, bisa jadi selevel tanpa nama package dengan menulis tanda . ketika import packagenya. kak jut : tidak rekomen dengan import prefix
+dipta : interface sama halnya struct, bisa ada embedded dengan cara penerapan yang sama dengan struct
+rofik : kemarin salah satunya belajar tentang penulisan method, jadi misal punya type Greetung struct itu cara penulisan method nya bisa seperti func(g Greeting) SayHi() Greeting.
+nugroho : belajar method bisa dichaining, dengan cara mengembalikan structnya.
+niqma : interface diibaratkan sebuah kontrak yang harus dipenuhi tidak boleh kurang, tapi kalau tambah method lain diperbolehkan.
+novita : ada bitang * di method, maksudnya pointer, agar pass by reference agar tidak boros memory, karena harus dicopy.
+renaldi : di method nama fungsi bisa sama namun harus beda receiver
+samuel : golang tidak punya overload dan overwi=rite function.
+steven : pakai interface karena 3 hal, method tertentu (SUARA HILANG DI SAYA)
+utsman : buat beberapa file go berbeda package, untuk memanggil sesuatu dari package lain harus diimport terlebih dahulu.
+vidya : kedengeran ga mas? kalau dari aku mungkin kemarin pas challenge, melakukan kesalahan circle sama square (beda entitas) ditaruh dibeda file, sebaiknya kalau beda entitas bisa dipisah agar lebih ciamik.
+wilbert : (SUARA HILANG LAGI :() interface dalam interface dari struct yang tidak memenuhi kontrak bisa direturn panic("")
+yayah : method ketika dipanggil berada dipackage lain mai dipanggil di package main, jangan lupa import. dipanggil dengan cara package.struct.method
+yurham : cara-cara memberikan informasi dari luar code, dengan cara scanner, os.args, flag, environment variable, file, gunakan API service config
+ziana : case sensitive terkait penamaan variable, agar exported diawali huruf kapital.
+alvian : implement interface untuk struct harus sesuai kontrak, untuk akses field struct pakai casting, atau buat getter. pak edo : jgn takut melakukan refactor
+astika : kemarin belajar penamaan receiver, penamaannya bebas tetapi umumnya huruf awal dari struct. misal (g Greeting)
+bagas : menambahkan yurham, belajar untuk pass argument via terminal dengan os.Args (SUARA HILANG), kelemahannya berurutan, dengan flag agar tidak apa-apa bila tidak berurutan.
+barkah : perbedaan type property (Kuang jelas)
+christian : interface ada istilah type switching, tergantung jedis interface. masukin case by case untuk tipe interface yang digunakan.
+tami : harus teliti, seperti return dari method dan parameter. interface ga peduli tipe data, tapi dia peduli tujuan yang ingin dilakukan.
+dona : nama method harus beda jika receivernya sama karena bingung ketika method chaining. kak jut: error juga
