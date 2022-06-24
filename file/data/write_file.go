@@ -10,7 +10,7 @@ func WriteToFile(fileLocation string, input string) {
 	// buka file bisa pakai os atau ioutil
 	// file permission 0644 777
 
-	outputFile, outputError := os.OpenFile(fileLocation, os.O_RDWR|os.O_APPEND, 0644)
+	outputFile, outputError := os.OpenFile(fileLocation, os.O_RDWR, 0644)
 	if outputError != nil {
 		fmt.Println(outputError.Error())
 		fmt.Println("An error occured with file creation")

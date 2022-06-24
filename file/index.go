@@ -13,6 +13,6 @@ var fileLocation = "/home/ubuntu/ITDP/golang-fundamental/file/db.dat"
 
 func main() {
 	// data.CreateFile(fileLocation)
-	// data.WriteToFile(fileLocation, "Joko")
-	data.OpenWithOsOpenFile(fileLocation)
+	data.WriteToFile(fileLocation, "Joko")
+	// data.OpenWithOsOpenFile(fileLocation)
 }
